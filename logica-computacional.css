@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #cbd2e2;
+}
+
+header {
+    background: #111a2b;
+    color: #f2f2f2;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2c3e50;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.menu-lateral a {
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    background: #575757;
+}
+
+.menu-lateral .fechar {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+}
+.hero {
+    background: 
+        linear-gradient(rgba(17, 26, 43, 0.5), rgba(17, 26, 43, 0.6)),
+        url("img/fundo_coxinha2.png") no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 72px;
+    color: #e0a526;
+    font-weight: bold;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+}
+
+
+.container {
+    padding: 60px 20px;
+    background: #cbd2e2;
+}
+
+
+.conteudo {
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 32px;
+    margin: 32px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* ---------------------------- Fluxograma ---------------------------------*/
+
+.fluxograma {
+    background-color: #2a4365;
+    color: white;
+    border-radius: 16px;
+    padding: 60px;
+    margin-top: 32px;
+    margin: 32px;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.fluxograma h1 {
+    color: #e0a526;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.fluxograma p {
+    background-color: #111a2b;
+    color: white;
+    border-radius: 16px;
+    padding: 60px;
+    margin-top: 32px;
+    margin: 32px;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fluxograma p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------
+   ESTILO PARA TABELAS
+--------------------------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+}
+
+thead {
+    background-color: #111a2b;
+    color: #e0a526;
+}
+
+thead th {
+    padding: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #333333;
+}
+
+tbody td {
+    padding: 0.8rem;
+    border: 1px solid #333333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+tbody tr:hover {
+    background-color: #292929;
+}
+
+/* ----------------------------
+   Símbolos do Fluxograma
+----------------------------- */
+.symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0a526;
+    font-weight: bold;
+    border: 2px solid #e0a526;
+    margin: auto;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+}
+
+.symbol.terminador {
+    border-radius: 50px;
+}
+
+.symbol.processo {
+    border-radius: 6px;
+}
+
+.symbol.decisao {
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.symbol.decisao span {
+    transform: rotate(-45deg);
+}
+
+.symbol.fluxo {
+    position: relative;
+    width: 80px;
+    height: 10px;
+    background-color: #e0a526;
+    border: none;
+}
+
+.symbol.fluxo::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: -6px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid #e0a526;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.symbol.entrada-saida {
+    width: 100px;
+    height: 50px;
+    transform: skewX(-20deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.symbol.entrada-saida span {
+    transform: skewX(20deg);
+}
+
+.exemplo-fluxograma {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.exemplo-fluxograma h3 {
+    color: #e0a526;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.imagem-fluxograma {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    gap: 30px;                
+    flex-wrap: nowrap;        
+    overflow-x: auto;         /* Evita quebra em telas pequenas */
+    padding-bottom: 10px;
+}
+
+.imagem-fluxograma img {
+    width: 300px;             
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #e0a526;
+    background-color: #111a2b;
+    padding: 5px;
+}
+
+.imagem-fluxograma img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+/* ------------------ algoritimo ---------------------*/
+
+.algoritimos {
+    background-color: #2a4365;
+    color: white;
+    border-radius: 16px;
+    padding: 60px;
+    margin-top: 32px;
+    margin: 0;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.algoritimos h1 {
+    color: #e0a526;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.algoritimos p {
+    background-color: #111a2b;
+    color: white;
+    border-radius: 16px;
+    padding: 60px;
+    margin-top: 32px;
+    margin: 0;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.algoritimo p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.algoritimo-ex {
+    background-color: #2a4365;
+    color: white;
+    border-radius: 16px;
+    padding: 60px;
+    margin-top: 32px;
+    margin: 0;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.algoritimo-ex h1 {
+    color: #e0a526;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.algoritimo-ex p {
+    background-color: #111a2b;
+    color: white;
+    border-radius: 16px;
+    padding: 60px;
+    margin: 0;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.algoritimo-ex p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/*------------------- footer ----------------------- */
+footer {
+    background-color: #2c3e50;
+    color: #e0a526;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.cont-rodape p {
+    margin-bottom: 0.5rem;
+}
+
+.cont-rodape p a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-mim .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-mim .foto img {
+        width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .sobre-mim .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-mim .foto img {
+        width: 90%;
+    }
+}
