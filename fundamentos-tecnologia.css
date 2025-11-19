@@ -99,11 +99,9 @@ header {
     flex-direction: column;
     text-align: center;
 }
+/*-------------------- hardware ---------------------*/
 
-
-/* ---------------------------- Fluxograma ---------------------------------*/
-
-.fluxograma {
+.oque-hardware {
     background-color: #2a4365;
     color: white;
     border-radius: 16px;
@@ -120,14 +118,14 @@ header {
 }
 
 
-.fluxograma h1 {
+.oque-hardware h1 {
     color: #e0a526;
     font-size: 36px;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
-.fluxograma p {
+.oque-hardware p {
     background-color: #111a2b;
     color: white;
     border-radius: 16px;
@@ -143,132 +141,12 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.fluxograma p:hover {
+.oque-hardware p:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* --------------------------
-   ESTILO PARA TABELAS
---------------------------- */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    font-size: 1rem;
-    background-color: #111111;
-    color: #ffffff;
-    text-align: center;
-}
-
-thead {
-    background-color: #111a2b;
-    color: #e0a526;
-}
-
-thead th {
-    padding: 0.8rem;
-    font-weight: bold;
-    border: 1px solid #333333;
-}
-
-tbody td {
-    padding: 0.8rem;
-    border: 1px solid #333333;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #1a1a1a;
-}
-
-tbody tr:hover {
-    background-color: #292929;
-}
-
-/* ----------------------------
-   Símbolos do Fluxograma
------------------------------ */
-.symbol {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #e0a526;
-    font-weight: bold;
-    border: 2px solid #e0a526;
-    margin: auto;
-    text-align: center;
-    width: 100px;
-    height: 50px;
-    background-color: transparent;
-}
-
-.symbol.terminador {
-    border-radius: 50px;
-}
-
-.symbol.processo {
-    border-radius: 6px;
-}
-
-.symbol.decisao {
-    width: 80px;
-    height: 80px;
-    transform: rotate(45deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.symbol.decisao span {
-    transform: rotate(-45deg);
-}
-
-.symbol.fluxo {
-    position: relative;
-    width: 80px;
-    height: 10px;
-    background-color: #e0a526;
-    border: none;
-}
-
-.symbol.fluxo::after {
-    content: "";
-    position: absolute;
-    right: -10px;
-    top: -6px;
-    width: 0;
-    height: 0;
-    border-left: 15px solid #e0a526;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-}
-
-.symbol.entrada-saida {
-    width: 100px;
-    height: 50px;
-    transform: skewX(-20deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.symbol.entrada-saida span {
-    transform: skewX(20deg);
-}
-
-.exemplo-fluxograma {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.exemplo-fluxograma h3 {
-    color: #e0a526;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.imagem-fluxograma {
+.exemplo-hardware {
     display: inline-flex;
     justify-content: start;  
     align-items: center;      
@@ -280,7 +158,7 @@ tbody tr:hover {
     width: 100%;
 }
 
-.imagem-fluxograma img {
+.exemplo-hardware img {
     width: 300px;             
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
@@ -290,17 +168,72 @@ tbody tr:hover {
     flex-shrink: 0;
 }
 
-.imagem-fluxograma img:hover {
+.exemplo-hardware img:hover {
     transform: scale(1.05);
 }
-/* ------------------ algoritimo ---------------------*/
 
-.algoritimos {
+
+.componentes-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: nowrap;
+    margin: 40px auto;
+    width: 90%;
+}
+
+.item {
+    position: relative;
+    width: 350px; 
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden; 
+    border: 3px solid #e0a526;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 16px;
+    transition: 0.3s ease;
+}
+
+.texto-hover {
+    position: absolute;
+    inset: 0; 
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    transition: 0.4s ease;
+}
+
+.item:hover .texto-hover {
+    opacity: 1;
+}
+
+.item:hover img {
+    transform: scale(1.05);
+}
+/*-------------- Sistema Operacional ----------------*/
+
+.sistema-operacional {
     background-color: #2a4365;
     color: white;
     border-radius: 16px;
     padding: 60px;
-    margin: 32px auto;
+    margin-top: 32px auto;
+    margin: 32px;
     width: 95%;
     max-width: 1100px;
     text-align: center;
@@ -311,19 +244,20 @@ tbody tr:hover {
 }
 
 
-.algoritimos h1 {
+.sistema-operacional h1 {
     color: #e0a526;
     font-size: 36px;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
-.algoritimos p {
+.sistema-operacional p {
     background-color: #111a2b;
     color: white;
     border-radius: 16px;
     padding: 60px;
-    margin: 32px auto;
+    margin-top: 32px auto;
+    margin: 32px;
     width: 95%;
     max-width: 1100px;
     text-align: center;
@@ -333,43 +267,130 @@ tbody tr:hover {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.algoritimo p:hover {
+.sistema-operacional p:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
+.exemplo-SO {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
 
-.algoritimos h3 {
+.exemplo-so .col-esquerda h1{
     color: white;
-    font-size: 24px;
-    margin-top: 24px;
-    margin-bottom: 18px;
-    font-weight: 700;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+}
+
+.exemplo-SO img {
+    width: 360px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.exemplo-SO p {
+    flex: 1; 
+    text-align: right;
+}
+
+.exemplo2-SO {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.exemplo2-so .col-direita h1{
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+}
+
+.exemplo2-SO img {
+    width: 360px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.exemplo2-SO p {
+    flex: 1; 
     text-align: left;
 }
-/*------------------ portugol ----------------------*/
 
-.portugol{
+
+.exemplo3-SO {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.exemplo3-so .col-esquerda h1{
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+}
+
+.exemplo3-SO img {
+    width: 360px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.exemplo3-SO p {
+    flex: 1; 
+    text-align: right
+}
+
+.exemplo4-SO {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.exemplo4-so .col-direita h1{
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+}
+
+.exemplo4-SO img {
+    width: 360px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.exemplo4-SO p {
+    flex: 1; 
+    text-align: left;
+}
+/*--------------- Sistema de arquivo ----------------*/
+
+.sistema-arquivos {
     background-color: #2a4365;
     color: white;
     border-radius: 16px;
     padding: 60px;
-    margin: 32px auto;
-    width: 95%;
-    max-width: 1100px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease;
-    transform: translateY(0);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.portugol p {
-    background-color: #111a2b;
-    color: white;
-    border-radius: 16px;
-    padding: 60px;
-    margin: 32px auto; 
+    margin-top: 32px auto;
+    margin: 32px;
     width: 95%;
     max-width: 1100px;
     text-align: center;
@@ -380,59 +401,28 @@ tbody tr:hover {
 }
 
 
-.portugol h1 {
+.sistema-arquivos h1 {
     color: #e0a526;
     font-size: 36px;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
-
-.portugol p:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-
-.portugol h3 {
+.sistema-arquivos h2 {
     color: white;
-    font-size: 24px;
-    margin-top: 24px;
-    margin-bottom: 18px;
-    font-weight: 700;
-    text-align: left;
-}
-
-/*--------------- Variaveis e constantes ------------*/
-
-.variaveis {
-    background-color: #2a4365;
-    color: white;
-    border-radius: 16px;
-    padding: 60px;
-    margin: 32px auto; 
-    width: 95%;
-    max-width: 1100px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease;
-    transform: translateY(0);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.variaveis h1 {
-    color: #e0a526;
-    font-size: 36px;
+    font-size: 28px;
     margin-bottom: 10px;
     font-weight: 700;
+    text-align: left;
 }
 
-.variaveis p {
+.sistema-arquivos p {
     background-color: #111a2b;
     color: white;
     border-radius: 16px;
     padding: 60px;
-    margin: 32px auto; 
+    margin-top: 32px auto;
+    margin: 32px;
     width: 95%;
     max-width: 1100px;
     text-align: center;
@@ -442,85 +432,12 @@ tbody tr:hover {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.variaveis p:hover {
+.sistema-arquivos p:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-
-.variaveis h3 {
-    color: white;
-    font-size: 24px;
-    margin-top: 24px;
-    margin-bottom: 18px;
-    font-weight: 700;
-    text-align: left;
-}
-/*------------------ tipos de dados -----------------*/
-
-
-.tipo-portugol {
-    background-color: #2a4365;
-    color: white;
-    border-radius: 16px;
-    padding: 60px;
-    margin: 32px auto; 
-    width: 95%;
-    max-width: 1100px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease;
-    transform: translateY(0);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.tipo-portugol p {
-    background-color: #111a2b;
-    color: white;
-    border-radius: 16px;
-    padding: 60px;
-    margin: 32px auto; 
-    width: 95%;
-    max-width: 1100px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease;
-    transform: translateY(0);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.tipo-portugol p:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-
-.exemplos h1 {
-    color: #e0a526;
-    font-size: 24px;
-    margin-top: 24px;
-    margin-bottom: 18px;
-    font-weight: 700;
-    text-align: left;
-}
-
-.exemplos p {
-    background-color: #111a2b;
-    color: white;
-    border-radius: 16px;
-    padding: 60px;
-    margin: 32px auto; 
-    width: 95%;
-    max-width: 1100px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease;
-    transform: translateY(0);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-/*----------------- Exenplos ------------------------*/
-
-.exemplos-funcao {
+.ilustracao {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -528,7 +445,7 @@ tbody tr:hover {
     padding-bottom: 20px;
 }
 
-.exemplos-funcao img {
+.ilustracao img {
     width: 300px;
     height: auto;
     border-radius: 12px;
@@ -538,33 +455,113 @@ tbody tr:hover {
     flex-shrink: 0; 
 }
 
-.exemplos-funcao img:hover {
+.ilustracao img:hover {
     transform: scale(1.05);
 }
 
-.exemplo-vetor {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: nowrap;
-    padding-bottom: 20px;
-}
+/* ------------------- modo texto -------------------*/
 
-.exemplo-vetor img {
-    width: 300px;
-    height: auto;
-    border-radius: 12px;
-    border: 4px solid #e0a526; 
-    background: white;
-    padding: 5px;
-    flex-shrink: 0; 
-}
 
-.exemplo-vetor img:hover {
-    transform: scale(1.05);
+.modo-texto {
+    background-color: #2a4365;
+    color: white;
+    border-radius: 16px;
+    padding: 60px;
+    margin-top: 32px auto;
+    margin: 32px;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 
+.modo-texto h1 {
+    color: #e0a526;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.sistema-arquivos h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.modo-texto p {
+    background-color: #111a2b;
+    color: white;
+    border-radius: 16px;
+    padding: 60px;
+    margin-top: 32px auto;
+    margin: 32px;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modo-texto p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------- modo grafico -------------------*/
+
+
+.modo-grafico {
+    background-color: #2a4365;
+    color: white;
+    border-radius: 16px;
+    padding: 60px;
+    margin-top: 32px auto;
+    margin: 32px;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.modo-grafico h1 {
+    color: #e0a526;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.modo-grafico p {
+    background-color: #111a2b;
+    color: white;
+    border-radius: 16px;
+    padding: 60px;
+    margin-top: 32px auto;
+    margin: 32px;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modo-grafico p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
 
 /*------------------- footer ----------------------- */
 footer {
