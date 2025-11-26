@@ -225,6 +225,7 @@ header {
 .item:hover img {
     transform: scale(1.05);
 }
+
 /*-------------- Sistema Operacional ----------------*/
 
 .sistema-operacional {
@@ -663,6 +664,100 @@ header {
 .exemplos-word iframe:hover {
     transform: scale(1.05);
 }
+
+.excel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.excel .col-direita h1{
+    color: #e0a526;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+}
+
+.excel img {
+    width: 360px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.excel p {
+    flex: 1; 
+    text-align: right
+}
+
+.exemplo-excel {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    gap: 30px;            
+    overflow-x: auto;
+    overflow-y: hidden; 
+    padding: 20px 0; 
+    white-space: nowrap;  
+}
+
+.exemplo-excel iframe {             
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #e0a526;
+    background-color: #111a2b;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.PowerPoint {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.PowerPoint .col-direita h1{
+    color: #e0a526;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+}
+
+.PowerPoint img {
+    width: 360px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.PowerPoint p {
+    flex: 1; 
+    text-align: right
+}
+
+.exemplo-powerpoint {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    gap: 30px;            
+    overflow-x: auto;
+    overflow-y: hidden; 
+    padding: 20px 0; 
+    white-space: nowrap;  
+}
+
+.exemplo-powerpoint iframe {             
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #e0a526;
+    background-color: #111a2b;
+    padding: 5px;
+    flex-shrink: 0;
+} 
 
 /*------------------- footer ----------------------- */
 footer {

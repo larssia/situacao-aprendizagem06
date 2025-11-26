@@ -116,6 +116,8 @@ header {
 }
 
 /* ======== TÍTULOS E TEXTOS ======== */
+
+/*pegue todos os h1 e p e deixe no mesmo estilo*/
 .incluso h1,
 .preco h1,
 .benficios h1 {
@@ -148,11 +150,14 @@ a {
     transition: color 0.3s ease;
 }
 
+/*hover: movimento do "bloco de texto" ao ser passado pelo mouser*/
+
 a:hover {
     color: #f4b942;
     text-decoration: underline;
 }
 
+/*-------------- footer ----------------*/
 footer {
     background-color: #2c3e50;
     color: white;
