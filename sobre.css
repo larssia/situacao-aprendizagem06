@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0A0D0F;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 60px;
+}
+
+.logo img{
+    height: 40px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav a {
+    margin-left: 35px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #e0a526;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.materias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/*-------- logica computacional-----------*/
+
+.materias .logica-computacional {
+    background-color: #0A0D0F;
+    border: 2px solid #e0a526;
+    border-radius: 10px;
+    padding: 30px 40px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.materias .logica-computacional h1 a {
+    color: #e0a526; 
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.materias .logica-computacional h1 a:hover {
+    color: #ffcc33; 
+}
+
+.materias .logica-computacional p {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+/*------------ logica programacao ------------*/
+
+.materias .logica-programacao {
+    background-color: #0A0D0F;
+    border: 2px solid #e0a526;
+    border-radius: 10px;
+    padding: 30px 40px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.materias .logica-programacao h1 a {
+    color: #e0a526; 
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.materias .logica-programacao h1 a:hover {
+    color: #ffcc33; 
+}
+
+.materias .logica-programacao p {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+/* --------- eletronica ----------*/
+
+.materias .fundamentos-eletroele {
+    background-color: #0A0D0F;
+    border: 2px solid #e0a526;
+    border-radius: 10px;
+    padding: 30px 40px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.materias .fundamentos-eletroele h1 a {
+    color: #e0a526; 
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.materias .fundamentos-eletroele h1 a:hover {
+    color: #ffcc33; 
+}
+
+.materias .fundamentos-eletroele p {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+/* --------------- dados -------------*/
+
+.materias .funcionamento-dados {
+    background-color: #0A0D0F;
+    border: 2px solid #e0a526;
+    border-radius: 10px;
+    padding: 30px 40px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.materias .funcionamento-dados h1 a {
+    color: #e0a526; 
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.materias .funcionamento-dados h1 a:hover {
+    color: #ffcc33; 
+}
+
+.materias .funcionamento-dados p {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+/*-------------- tecnologia --------------*/
+
+.materias .fundamentos-tecnologia {
+    background-color: #0A0D0F;
+    border: 2px solid #e0a526;
+    border-radius: 10px;
+    padding: 30px 40px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin-top: 28px;
+    max-width: 800px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.materias .fundamentos-tecnologia h1 a {
+    color: #e0a526; 
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.materias .fundamentos-tecnologia h1 a:hover {
+    color: #ffcc33; 
+}
+
+.materias .fundamentos-tecnologia p {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+/* //-------------------------------------------------------------// */
+
+footer {
+    background-color: #0A0D0F;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.cont-rodape p {
+    margin-bottom: 0.5rem;
+}
+
+.cont-rodape p a{
+    color: #e0a526;
+    text-decoration: none;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-mim .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-mim .foto img {
+        width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .sobre-mim .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-mim .foto img {
+        width: 90%;
+    }
+}

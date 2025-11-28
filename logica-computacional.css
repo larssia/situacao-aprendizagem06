@@ -1,0 +1,574 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0A0D0F;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 60px;
+}
+
+.logo img{
+    height: 40px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav a {
+    margin-left: 35px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    margin-top: 150px;
+    padding: 20px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./img/fundo_coxinha2.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.35); 
+    z-index: -1;
+}
+
+.hero h1 {
+    margin-top: 15px;
+    font-size: 58px;
+    font-weight: 600;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.conteudo {
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 32px;
+    margin: 32px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* ---------------------------- Fluxograma ---------------------------------*/
+
+.fluxograma {
+    background-color: #0A0D0F;
+    color: white;
+    border: 2px solid #e0a526;
+    border-radius: 10px;
+    padding: 60px;
+    margin-top: 32px auto;
+    margin: 32px;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+
+.fluxograma h1 {
+    color: #e0a526;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.fluxograma p {
+    background-color: #0A0D0F;
+    color: white;
+    border: 2px solid #e0a526;
+    border-radius: 10px;
+    padding: 60px;
+    margin-top: 32px auto;
+    margin: 32px;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+.fluxograma p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------
+   ESTILO PARA TABELAS
+--------------------------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+    background-color: #0A0D0F;
+    color: white;
+    border: 2px solid #e0a526;
+    color: #ffffff;
+    text-align: center;
+}
+
+thead {
+    background-color: #0A0D0F;
+    color: #e0a526;
+}
+
+thead th {
+    padding: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #333333;
+}
+
+tbody td {
+    padding: 0.8rem;
+    border: 1px solid #333333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+tbody tr:hover {
+    background-color: #292929;
+}
+
+/* ----------------------------
+   Símbolos do Fluxograma
+----------------------------- */
+.symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0a526;
+    font-weight: bold;
+    border: 2px solid #e0a526;
+    margin: auto;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+}
+
+.symbol.terminador {
+    border-radius: 50px;
+}
+
+.symbol.processo {
+    border-radius: 6px;
+}
+
+.symbol.decisao {
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.symbol.decisao span {
+    transform: rotate(-45deg);
+}
+
+.symbol.fluxo {
+    position: relative;
+    width: 80px;
+    height: 10px;
+    background-color: #e0a526;
+    border: none;
+}
+
+.symbol.fluxo::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: -6px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid #e0a526;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.symbol.entrada-saida {
+    width: 100px;
+    height: 50px;
+    transform: skewX(-20deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.symbol.entrada-saida span {
+    transform: skewX(20deg);
+}
+
+.exemplo-fluxograma {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.exemplo-fluxograma h3 {
+    color: #e0a526;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.imagem-fluxograma {
+    display: inline-flex;
+    justify-content: start;  
+    align-items: center;      
+    gap: 30px;            
+    overflow-x: auto;
+    overflow-y: hidden; 
+    padding: 20px 0; 
+    white-space: nowrap;  
+    width: 100%;
+}
+
+.imagem-fluxograma img {
+    width: 300px;             
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #e0a526;
+    background-color: #111a2b;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.imagem-fluxograma img:hover {
+    transform: scale(1.05);
+}
+
+/* ------------------ algoritimo ---------------------*/
+
+.algoritimos {
+    background-color: #0A0D0F;
+    border: 2px solid #e0a526;
+    color: white;
+    padding: 60px;
+    border-radius: 10px;
+    margin: 32px auto;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+
+.algoritimos h1 {
+    color: #e0a526;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.algoritimos p {
+    background-color: #0A0D0F;
+    border: 2px solid #e0a526;
+    color: white;
+    border-radius: 16px;
+    padding: 60px;
+    border-radius: 10px;
+    margin: 32px auto;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+.algoritimo p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.algoritimos h3 {
+    color: white;
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    font-weight: 700;
+    text-align: left;
+}
+/*------------------ portugol ----------------------*/
+
+.portugol{
+    background-color: #0A0D0F;
+    border: 2px solid #e0a526;
+    color: white;
+    padding: 60px;
+    border-radius: 10px;
+    margin: 32px auto;
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+.portugol p {
+    background-color: #0A0D0F;
+    color: white;
+    border: 2px solid #e0a526;
+    padding: 60px;
+    border-radius: 10px;
+    margin: 32px auto; 
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+
+.portugol h1 {
+    color: #e0a526;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+
+.portugol p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.portugol h3 {
+    color: white;
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    font-weight: 700;
+    text-align: left;
+}
+
+/*--------------- Variaveis e constantes ------------*/
+
+.variaveis {
+    background-color: #0A0D0F;
+    border: 2px solid #e0a526;
+    color: white;
+    padding: 60px;
+    border-radius: 10px;
+    margin: 32px auto; 
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+.variaveis h1 {
+    color: #e0a526;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.variaveis p {
+    background-color: #0A0D0F;
+    color: white;
+    border: 2px solid #e0a526;
+    padding: 60px;
+    border-radius: 10px;
+    margin: 32px auto; 
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+.variaveis p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.variaveis h3 {
+    color: white;
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    font-weight: 700;
+    text-align: left;
+}
+/*------------------ tipos de dados -----------------*/
+
+
+.tipo-portugol {
+    background-color: #0A0D0F;
+    color: white;
+    border: 2px solid #e0a526;
+    padding: 60px;
+    border-radius: 10px;
+    margin: 32px auto; 
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+.tipo-portugol p {
+    background-color: #0A0D0F;
+    color: white;
+    border: 2px solid #e0a526;
+    padding: 60px;
+    border-radius: 10px;
+    margin: 32px auto; 
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tipo-portugol p:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.exemplos h1 {
+    color: #e0a526;
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.exemplos p {
+    background-color: #0A0D0F;
+    color: white;
+    border: 2px solid #e0a526;
+    padding: 60px;
+    border-radius: 10px;
+    margin: 32px auto; 
+    width: 95%;
+    max-width: 1100px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+/*----------------- Exenplos ------------------------*/
+
+.exemplos-funcao {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    padding-bottom: 20px;
+}
+
+.exemplos-funcao img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    border: 4px solid #e0a526; 
+    background: white;
+    padding: 5px;
+    flex-shrink: 0; 
+}
+
+.exemplos-funcao img:hover {
+    transform: scale(1.05);
+}
+
+.exemplo-vetor {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    padding-bottom: 20px;
+}
+
+.exemplo-vetor img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    border: 4px solid #e0a526; 
+    background: white;
+    padding: 5px;
+    flex-shrink: 0; 
+}
+
+.exemplo-vetor img:hover {
+    transform: scale(1.05);
+}
+
+
+/*------------------- footer ----------------------- */
+footer {
+    color: #e0a526;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.cont-rodape p {
+    margin-bottom: 0.5rem;
+}
+
+.cont-rodape p a{
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #0A0D0F;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 60px;
+}
+
+.logo img{
+    height: 40px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav a {
+    margin-left: 35px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #c2d6ff;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.plano-pro {
+    color: #e0a526;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+}
+
+.texto {
+    background-color: #0A0D0F;
+    border: 2px solid #e0a526;
+    border-radius: 10px;
+    padding: 35px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.texto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* ======== TÍTULOS E TEXTOS ======== */
+
+/*pegue todos os h1 e p e deixe no mesmo estilo*/
+
+.incluso h1,
+.preco h1,
+.benficios h1 {
+    font-size: 26px;
+    color: #f4b942;
+    margin-bottom: 10px;
+}
+
+.oque p,
+.quais p {
+    font-size: 18px;
+    color: #dcdcdc;
+    margin-bottom: 8px;
+}
+
+.preco h2 {
+    color: #9bc0ff;
+    margin-top: 10px;
+}
+
+.preco h3 {
+    color: #81ffbe;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+a {
+    color: #9bc0ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/*hover: movimento do "bloco de texto" ao ser passado pelo mouser*/
+
+a:hover {
+    color: #f4b942;
+    text-decoration: underline;
+}
+/*-------------- footer ---------------*/
+
+footer {
+    background-color: #0A0D0F;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.cont-rodape p {
+    margin-bottom: 0.5rem;
+}
+
+.cont-rodape p a{
+    color: #e0a526;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .texto {
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    header .logo {
+        font-size: 22px;
+    }
+}
