@@ -5,106 +5,163 @@
 }
 
 body {
-    margin: 0;
-    background: #0A0D0F;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #fff;
+    font-family: 'Playfair Display', serif;
+    background-color: #f8f8f8;
 }
 
-/* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 28px 60px;
+    background: #111a2b;
+    color: #f2f2f2;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.logo img{
-    height: 40px;
-    margin: auto;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 1px;
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 15px;
 }
 
-nav a {
-    margin-left: 35px;
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2c3e50;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.menu-lateral a {
+    padding: 12px 25px;
     text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    opacity: 0.85;
+    font-size: 20px;
+    color: white;
+    display: block;
     transition: 0.3s;
 }
 
-nav a:hover {
-    opacity: 1;
+.menu-lateral a:hover {
+    background: #575757;
 }
 
-/* HERO */
-.hero {
-    text-align: center;
-    margin-top: 150px;
-    padding: 20px;
-}
-
-.hero-bg {
+.menu-lateral .fechar {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./img/fundo_coxinha2.png"); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.35); 
-    z-index: -1;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    background: url("img/fundo_coxinha2.png") no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hero h1 {
-    margin-top: 15px;
-    font-size: 58px;
-    font-weight: 600;
+    font-size: 64px;
+    color: #333;
+    font-family: 'Playfair Display', serif;
 }
+
+.nosso-contato {
+    color: white; 
+    font-size: 120px;
+}
+
+.container {
+    padding: 50px;
+    background: #eae8e4;
+}
+
+
 .por-que-meio {
     display: flex;
+    align-items: flex-start;
     justify-content: center;
-    flex-wrap: wrap; /* permite quebrar em telas menores */
-    gap: 20px;
-    padding: 40px 20px;
-    border-radius: 12px;
-    max-width: 1100px;
-    margin: 40px auto;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px 20px 40px 20px;
 }
 
-.por-que-meio h1 {
-    border: 2px solid #d49c29;
-    border-radius: 12px;
-    padding: 15px 25px;
-    font-size: 20px;
-    margin: 0;
-    color: #f1f1f1;
-    font-family: 'Playfair Display', serif;
-    background: rgba(255,255,255,0.03);
-    backdrop-filter: blur(3px);
-    min-width: 250px;
+.por-que-meio .telefone {
+    font-size: 28px;
+    margin-top: 25px;
+    margin-bottom: 15px;
     text-align: center;
-    transition: 0.3s ease;
+    font-family: 'Playfair Display', serif;
 }
 
-.por-que-meio h1:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 12px rgba(212, 156, 41, 0.4);
+.por-que-meio .telefone{
+    font-family: Arial, sans-serif;
 }
 
-.por-que-meio h1 a {
-    color: inherit;
+.por-que-meio .telefone{
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.por-que-meio h1{
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: rgb(206, 201, 201);
+    font-family: 'Playfair Display', serif;
+}
+
+.por-que-meio h2 a{
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: rgb(206, 201, 201);
     text-decoration: none;
+    font-family: 'Playfair Display', serif;
 }
-/*----------------- footer ------------------*/
+
+.por-que-meio h3{
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: rgb(206, 201, 201);
+    font-family: 'Playfair Display', serif;
+}
+
+.por-que-meio h4 a{
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+     color: rgb(206, 201, 201);
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
+
 
 footer {
-    color: #e0a526;
+    background-color: #2c3e50;
+    color: white;
     text-align: center;
     padding: 2rem 0;
     margin-top: 3rem;
@@ -114,6 +171,20 @@ footer {
     margin-bottom: 0.5rem;
 }
 
+.cont-rodape p a{
+    color: #e0a526;
+    text-decoration: none;
+}
+
+.cont-rodape a{
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+     color: white;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -135,4 +206,4 @@ footer {
     .sobre-mim .foto img {
         width: 90%;
     }
-} 
+}

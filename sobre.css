@@ -5,50 +5,73 @@
 }
 
 body {
-    margin: 0;
-    background: #0A0D0F;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #fff;
+    font-family: 'Playfair Display', serif;
+    background-color: #bebebe;
 }
 
-/* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 28px 60px;
+    background: #111a2b;
+    color: #f2f2f2;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.logo img{
-    height: 40px;
-    margin: auto;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 1px;
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 15px;
 }
 
-nav a {
-    margin-left: 35px;
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2c3e50;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.menu-lateral a {
+    padding: 12px 25px;
     text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    opacity: 0.85;
+    font-size: 20px;
+    color: white;
+    display: block;
     transition: 0.3s;
 }
 
-nav a:hover {
-    opacity: 1;
+.menu-lateral a:hover {
+    background: #575757;
+}
+
+.menu-lateral .fechar {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
 }
 
 .hero {
-    text-align: center;
-    padding: 50px 20px 30px;
+  text-align: center;
+  padding: 3rem 1rem 1rem;
 }
 
 .hero h1 {
-    font-size: 42px;
-    color: #e0a526;
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  font-size: 2.5rem;
+  color: #2c3e50;
+  letter-spacing: 1px;
+  font-weight: 800;
 }
 
 .materias {
@@ -60,14 +83,11 @@ nav a:hover {
     padding: 20px;
 }
 
-/*-------- logica computacional-----------*/
-
 .materias .logica-computacional {
-    background-color: #0A0D0F;
-    border: 2px solid #e0a526;
+    background-color: #2c3e50; 
     border-radius: 10px;
     padding: 30px 40px;
-    color: white;
+    color: #bebebe;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 800px;
@@ -91,20 +111,17 @@ nav a:hover {
 }
 
 .materias .logica-computacional p {
-    color: white;
+    color: #bebebe;
     font-size: 16px;
     text-decoration: none;
     margin-bottom: 10px;
 }
 
-/*------------ logica programacao ------------*/
-
 .materias .logica-programacao {
-    background-color: #0A0D0F;
-    border: 2px solid #e0a526;
+    background-color: #bebebe; 
     border-radius: 10px;
     padding: 30px 40px;
-    color: white;
+    color: #111a2b;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 800px;
@@ -128,20 +145,17 @@ nav a:hover {
 }
 
 .materias .logica-programacao p {
-    color: white;
+    color: #111a2b;
     font-size: 16px;
     text-decoration: none;
     margin-bottom: 10px;
 }
 
-/* --------- eletronica ----------*/
-
 .materias .fundamentos-eletroele {
-    background-color: #0A0D0F;
-    border: 2px solid #e0a526;
+    background-color: #2c3e50; 
     border-radius: 10px;
     padding: 30px 40px;
-    color: white;
+    color: #bebebe;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 800px;
@@ -165,20 +179,17 @@ nav a:hover {
 }
 
 .materias .fundamentos-eletroele p {
-    color: white;
+    color: #bebebe;
     font-size: 16px;
     text-decoration: none;
     margin-bottom: 10px;
 }
 
-/* --------------- dados -------------*/
-
 .materias .funcionamento-dados {
-    background-color: #0A0D0F;
-    border: 2px solid #e0a526;
+    background-color: #bebebe; 
     border-radius: 10px;
     padding: 30px 40px;
-    color: white;
+    color: #111a2b;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 800px;
@@ -202,17 +213,14 @@ nav a:hover {
 }
 
 .materias .funcionamento-dados p {
-    color: white;
+    color: #111a2b;
     font-size: 16px;
     text-decoration: none;
     margin-bottom: 10px;
 }
 
-/*-------------- tecnologia --------------*/
-
 .materias .fundamentos-tecnologia {
-    background-color: #0A0D0F;
-    border: 2px solid #e0a526;
+    background-color: #2c3e50; 
     border-radius: 10px;
     padding: 30px 40px;
     color: white;
@@ -248,7 +256,7 @@ nav a:hover {
 /* //-------------------------------------------------------------// */
 
 footer {
-    background-color: #0A0D0F;
+    background-color: #2c3e50;
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -264,6 +272,10 @@ footer {
     text-decoration: none;
 }
 
+.cont-rodape a{
+    color: white;
+    text-decoration: none;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {

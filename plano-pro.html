@@ -10,17 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-   <header>
-        <div class="logo">
-            <img src="./img/logo-nome03.png" alt="">
-        </div>
-
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="./sobre.html">Sobre</a>
-            <a href="./projetos.html">Projetos</a>
-        </nav>
+   <!-- Cabeçalho -->
+    <header>
+        <span class="menu-btn" onclick="abrirMenu()">&#9776;</span>
+        <span class="logo">Analusys</span>
     </header>
+
+    <!-- Menu lateral -->
+    <nav id="menu-lateral" class="menu-lateral">
+        <a href="javascript:void(0)" class="fechar" onclick="fecharMenu()">&times;</a>
+        <a href="./index.html">Início</a>
+        <a href="./sobre.html">Sobre</a>
+        <a href="./projetos.html">Projetos</a>
+    </nav>
 
     <section class="hero">
         <h1><span class="plano-pro">Plano Pro</span></h1>
@@ -61,6 +63,7 @@
             <p>
                 <a href="https://www.instagram.com/bernardi7072/">Instagram</a>
             </p>
+            <a href="./index.html">Voltar</a>
         </div>
     </footer>
 

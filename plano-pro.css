@@ -5,41 +5,78 @@
 }
 
 body {
-    margin: 0;
-    background: #0A0D0F;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #fff;
+    font-family: 'Playfair Display', serif;
+    background: #dcdcdc;
+    color: #e8e8e8;
+    line-height: 1.6;
 }
 
-/* HEADER */
 header {
+    background-color: #111a2b;
+    color: #f2f2f2;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 28px 60px;
+    text-align: left;
+    padding: 15px 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    gap: 15px;
+    z-index: 100;
 }
 
-.logo img{
-    height: 40px;
-    margin: auto;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 1px;
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 15px;
 }
 
-nav a {
-    margin-left: 35px;
+
+.logo {
+    margin-left: 10px;
+    font-size: 26px;
+    color: #c2d6ff;
+}
+
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0e1727;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.menu-lateral a {
+    padding: 12px 25px;
     text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    opacity: 0.85;
+    font-size: 20px;
+    color: #d7e3ff;
+    display: block;
     transition: 0.3s;
 }
 
-nav a:hover {
-    opacity: 1;
+.menu-lateral a:hover {
+    background-color: #14233b;
+    color: #fff;
 }
 
+/* Obs: Não consegui mudar o larissa para a esquerda */
+.menu-lateral .fechar {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+}
 
 .hero {
     text-align: center;
@@ -53,7 +90,7 @@ nav a:hover {
 }
 
 .plano-pro {
-    color: #e0a526;
+    color: #14233b;
 }
 
 .container {
@@ -64,9 +101,8 @@ nav a:hover {
 }
 
 .texto {
-    background-color: #0A0D0F;
-    border: 2px solid #e0a526;
-    border-radius: 10px;
+    background-color: rgba(34, 46, 65, 0.85);
+    border-radius: 15px;
     padding: 35px;
     width: 100%;
     max-width: 800px;
@@ -122,21 +158,25 @@ a:hover {
     text-decoration: underline;
 }
 /*-------------- footer ---------------*/
-
 footer {
-    background-color: #0A0D0F;
+    background-color: #2c3e50;
     color: white;
     text-align: center;
     padding: 2rem 0;
     margin-top: 3rem;
 }
 
-.cont-rodape p {
+.cont-rodape p{
     margin-bottom: 0.5rem;
 }
 
 .cont-rodape p a{
     color: #e0a526;
+    text-decoration: none;
+}
+ 
+.cont-rodape a{
+    color: white;
     text-decoration: none;
 }
 

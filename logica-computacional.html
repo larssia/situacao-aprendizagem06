@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,25 +14,21 @@
 <body>
     <!-- Cabeçalho -->
     <header>
-        <div class="logo">
-            <img src="./img/logo-nome03.png" alt="">
-        </div>
-
-        <nav>
-            <a href="./index.html">Home</a>
-            <a href="./sobre.html">Sobre</a>
-            <a href="./projetos.html">Projetos</a>
-        </nav>
+        <span class="menu-btn" onclick="abrirMenu()">&#9776;</span>
+        <span class="logo">Analusys</span>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- Menu lateral -->
+    <nav id="menu-lateral" class="menu-lateral">
+        <a href="javascript:void(0)" class="fechar" onclick="fecharMenu()">&times;</a>
+        <a href="./index.html">Início</a>
+        <a href="./sobre.html">Sobre</a>
+        <a href="./projetos.html">Projetos</a>
+    </nav>
+
     <section class="hero">
-        <div class="hero-bg"></div>
-
-        <h1>Lógica Computacional</h1>
-
+        <h1><span class="conteudo"> Lógica Computacional</span>
     </section>
-
 
     <main class="conteudo">
 
@@ -119,8 +114,7 @@
 
             <h3>Exemplo prático:</h3>
 
-            <p>Os algoritmos estão presentes em praticamente todas as áreas da tecnologia e também no nosso dia a dia.
-                Um exemplo disso é uma receita de bolo, você segue um conjunto de passos, em ordem,
+            <p>Os algoritmos estão presentes em praticamente todas as áreas da tecnologia e também no nosso dia a dia. Um exemplo disso é uma receita de bolo, você segue um conjunto de passos, em ordem,
                 para alcançar um resultado final.
             </p>
             <table border="1">
@@ -166,9 +160,9 @@
                 controlar e manipular dados, permitindo que o computador execute as tarefas de maneira precisa e
                 estruturada.</p>
 
-            <h3>Exemplos:</h3>
+                <h3>Exemplos:</h3>
 
-            <table border="1">
+                <table border="1">
                 <thead>
                     <tr>
                         <th>Exemplificação</th>
@@ -220,65 +214,42 @@
 
         <h1>Quais os tipos de dados mais usados no Portugol?</h1>
         <div class="tipo-portugol">
-            <p>Os tipos de dados no Portugol são fundamentais para organizar as informações que o programa irá utilizar
-                durante sua execução. Cada tipo define qual formato de dado pode ser armazenado, garantindo que os
-                valores sejam tratados de maneira correta e segura. Entre os mais usados está o inteiro, responsável por
-                números sem casas decimais, e o real, que permite trabalhar com valores numéricos fracionados. Também
-                existe o caractere, utilizado para representar um único símbolo, e a cadeia, que armazena textos mais
-                longos, como palavras ou frases. Além deles, o tipo lógico é usado quando precisamos de decisões
-                baseadas em verdadeiro ou falso. Ao escolher o tipo de dado adequado, o programador assegura que o
-                algoritmo funcione com precisão, evitando erros e tornando o código mais organizado e eficiente.</p>
+            <p>Os tipos de dados no Portugol são fundamentais para organizar as informações que o programa irá utilizar durante sua execução. Cada tipo define qual formato de dado pode ser armazenado, garantindo que os valores sejam tratados de maneira correta e segura. Entre os mais usados está o inteiro, responsável por números sem casas decimais, e o real, que permite trabalhar com valores numéricos fracionados. Também existe o caractere, utilizado para representar um único símbolo, e a cadeia, que armazena textos mais longos, como palavras ou frases. Além deles, o tipo lógico é usado quando precisamos de decisões baseadas em verdadeiro ou falso. Ao escolher o tipo de dado adequado, o programador assegura que o algoritmo funcione com precisão, evitando erros e tornando o código mais organizado e eficiente.</p>
             <div class="exemplos">
                 <h1>Tipo 1: Inteiro</h1>
-                <p>O tipo de dado inteiro é usado em algoritmos para representar números sem casas decimais, como 0, 15
-                    ou –3. Ele serve para guardar valores exatos, como idade, quantidade de itens ou qualquer número que
-                    não seja fracionado. No Portugol, usar o tipo inteiro ajuda o programa a entender que aquele valor
-                    será sempre um número completo, facilitando cálculos e evitando erros.</p>
+                <p>O tipo de dado inteiro é usado em algoritmos para representar números sem casas decimais, como 0, 15 ou –3. Ele serve para guardar valores exatos, como idade, quantidade de itens ou qualquer número que não seja fracionado. No Portugol, usar o tipo inteiro ajuda o programa a entender que aquele valor será sempre um número completo, facilitando cálculos e evitando erros.</p>
 
                 <img src="./img/ex-inteiro.png" alt="Exemplo Inteiro">
 
                 <h1>Tipo 2: Real</h1>
-                <p>O tipo de dado real é usado em algoritmos para representar números com casas decimais, como 3.5, 0.8
-                    ou 12.75. Ele é importante quando o programa precisa trabalhar com valores fracionados, como notas,
-                    pesos, medidas ou cálculos mais precisos. No Portugol, o tipo real garante que o computador armazene
-                    números completos e decimais corretamente, permitindo operações matemáticas mais detalhadas.</p>
+                <p>O tipo de dado real é usado em algoritmos para representar números com casas decimais, como 3.5, 0.8 ou 12.75. Ele é importante quando o programa precisa trabalhar com valores fracionados, como notas, pesos, medidas ou cálculos mais precisos. No Portugol, o tipo real garante que o computador armazene números completos e decimais corretamente, permitindo operações matemáticas mais detalhadas.</p>
 
                 <img src="./img/ex-real.png" alt="Exemplo Real">
 
                 <h1>Tipo 3: Caracter</h1>
-                <p>O tipo de dado caractere é utilizado em algoritmos para representar apenas um único símbolo, como uma
-                    letra, número ou sinal. Ele sempre é escrito entre aspas simples, por exemplo: 'A', '7' ou '?'. Esse
-                    tipo é importante quando precisamos armazenar apenas um caractere específico, como a inicial de um
-                    nome, uma opção de menu ou uma resposta simples do usuário. No Portugol, usar o tipo caractere ajuda
-                    o programa a entender que aquela informação é apenas um símbolo isolado, e não um texto completo.
-                </p>
+                <p>O tipo de dado caractere é utilizado em algoritmos para representar apenas um único símbolo, como uma letra, número ou sinal. Ele sempre é escrito entre aspas simples, por exemplo: 'A', '7' ou '?'. Esse tipo é importante quando precisamos armazenar apenas um caractere específico, como a inicial de um nome, uma opção de menu ou uma resposta simples do usuário. No Portugol, usar o tipo caractere ajuda o programa a entender que aquela informação é apenas um símbolo isolado, e não um texto completo.</p>
 
                 <img src="./img/ex-caracter.png" alt="Exemplo Caracter">
 
                 <h1>Tipo 4: Cadeia</h1>
-                <p>O tipo de dado cadeia é usado em algoritmos para representar textos, ou seja, conjuntos de vários
-                    caracteres. Diferente do tipo caractere, que armazena apenas um símbolo, a cadeia permite guardar
-                    palavras, frases e nomes completos, sempre escritos entre aspas duplas, como "Maria" ou "Bem-vindo
-                    ao programa". Esse tipo é essencial quando o algoritmo precisa trabalhar com informações textuais,
-                    como mensagens, nomes de pessoas ou respostas mais longas. No Portugol, utilizar o tipo cadeia ajuda
-                    o programa a organizar e manipular textos de forma clara e eficiente.</p>
+                <p>O tipo de dado cadeia é usado em algoritmos para representar textos, ou seja, conjuntos de vários caracteres. Diferente do tipo caractere, que armazena apenas um símbolo, a cadeia permite guardar palavras, frases e nomes completos, sempre escritos entre aspas duplas, como "Maria" ou "Bem-vindo ao programa". Esse tipo é essencial quando o algoritmo precisa trabalhar com informações textuais, como mensagens, nomes de pessoas ou respostas mais longas. No Portugol, utilizar o tipo cadeia ajuda o programa a organizar e manipular textos de forma clara e eficiente.</p>
 
                 <img src="./img/ex-cadeia.png" alt="Exemplo Cadeia">
-            </div>
+            </div>       
         </div>
         <h1>Exemplos de Funções: </h1>
         <br>
         <div class="exemplos-funcao">
-            <img src="./img/calcular-desconto.jpeg" alt="Exemplo 1">
-            <img src="./img/conversao-pressao.jpeg" alt="Exemplo 2">
-            <img src="./img/medir-area-tria.jpeg" alt="Exemplo 3">
+                <img src="./img/calcular-desconto.jpeg" alt="Exemplo 1">
+                <img src="./img/conversao-pressao.jpeg" alt="Exemplo 2">
+                <img src="./img/medir-area-tria.jpeg" alt="Exemplo 3">
         </div>
 
         <h1>Exemplos de Vetores:</h1>
         <br>
         <div class="exemplo-vetor">
-            <img src="./img/vetor1.jpeg" alt="Exemplo 1">
-            <img src="./img/vetor2.jpeg" alt="Exemplo 2">
+                <img src="./img/vetor1.jpeg" alt="Exemplo 1">
+                <img src="./img/vetor2.jpeg" alt="Exemplo 2">
         </div>
     </main>
 
@@ -297,5 +268,4 @@
 
 </body>
 </body>
-
 </html>
